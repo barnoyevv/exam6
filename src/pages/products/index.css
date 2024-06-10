@@ -1,65 +1,81 @@
-.users {
-  margin: 20px;
+.users-container {
+  padding: 20px;
 }
 
-.header-text {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  height: 400px; /* Fixed height for all cards */
-}
-
-.card-header {
-  flex-shrink: 0;
-}
-
-.card-body {
-  flex-grow: 1;
+.filter-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Ensure content that exceeds the height is hidden */
+  margin-bottom: 20px;
 }
 
-.card-footer {
-  flex-shrink: 0;
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-image {
-  max-height: 200px;
-  width: auto;
-  max-width: 100%;
-}
-
-.description {
-  font-size: 0.875rem;
-  margin-top: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Limit the description to 3 lines */
-  -webkit-box-orient: vertical;
-}
-
-.rate {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.rate h3{
-	font-size: 20px;
+.product-card:active {
+  background-color: #b1c024;
 }
-.price {
-  font-size: 1.5rem;
-  font-weight: bold;
+
+.product-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.product-card strong {
+  color: #333;
+}
+
+.product-card img.product-image {
+  max-width: 100%;
+  height: 300px;
   margin-top: 10px;
-	color: rgb(181, 99, 181);
+  border-radius: 8px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+}
+.FormControl1 {
+  width: 120px;
+  height: 40px;
+  position: relative;
+  top: 120px;
+  left: -110px;
+  height: auto;
 }
