@@ -10,7 +10,7 @@ import axios from "axios";
 import StarIcon from '@mui/icons-material/Star';
 import "./index.css"
 
-function Users() {
+function Products() {
 	const [users, setUsers] = useState([])
 	const [filteredProducts, setFilteredProducts] = useState([]);
 	const [category, setCategory] = useState("");
@@ -56,7 +56,7 @@ function Users() {
 
 	return (
 		<div>
-			<div className="FormContro2">
+			<div className="FormContro1">
 			<FormControl variant="outlined" fullWidth>
 					<InputLabel>Category</InputLabel>
 					<Select
@@ -87,28 +87,29 @@ function Users() {
 			<div className="products-list">
 				{displayedProducts.map(item => (
 					<div key={item.id} className="product-card">
-						<Link to={`/product/${item.id}`}>
+						<Link to={`/product/${item.id}`} className="text-decoration-none">
 							<div className="card">
-								<div className="card-header bg-primary">
-									<h3>{item.title}</h3>
+								<div className="card-header bg-primary text-center">
+									<h3 className="text-white">{item.title}</h3>
 								</div>
-								<div className="card-body">
+								<div className="card-body text-center">
 									<img
 										src={item.image}
 										alt={item.title}
 										className="product-image"
 									/>
 								</div>
+								
 								<div className="card-footer">
 									<p>{item.description}</p>
 									<div className="rate">
-										<span><StarIcon /></span>
+										<span><StarIcon sx={{color: "orange"}}/></span>
 										<span>{item.rating.rate}</span>
 									</div>
 									<strong>{item.price}$</strong>
 								</div>
 							</div>
-						</Link>
+							</Link>
 					</div>
 				))}
 			</div>
@@ -125,4 +126,4 @@ function Users() {
 	);
 }
 
-export default Users;
+export default Products;
