@@ -87,7 +87,7 @@ function Products() {
 			<div className="products-list">
 				{displayedProducts.map(item => (
 					<div key={item.id} className="product-card">
-						<Link to={`/product/${item.id}`} className="text-decoration-none">
+						<Link to={`/main/single-page/${item.id}`} className="text-decoration-none">
 							<div className="card">
 								<div className="card-header bg-primary text-center">
 									<h3 className="text-white">{item.title}</h3>
