@@ -108,7 +108,6 @@ function Users() {
 									<strong>{item.price}$</strong>
 								</div>
 							</div>
-
 						</Link>
 					</div>
 				))}
