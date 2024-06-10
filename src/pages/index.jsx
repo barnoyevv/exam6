@@ -1,5 +1,5 @@
 import Login from "./login";
 import Main from "./main";
 import Posts from './products/index';
-
-export {Login, Main, Posts}
+import TaskBoard from "./todos/todos";
+export {Login, Main, Posts, TaskBoard}

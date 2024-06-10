@@ -8,8 +8,8 @@ const routes = [
 		icon: <Inventory2RoundedIcon/>
 	},
 	{
-		path: "/main/albums",
-		content: "Albums",
+		path: "/main/todos",
+		content: "Tasks",
 		icon: <StyleRoundedIcon/>
 	}
 ];

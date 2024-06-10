@@ -3,7 +3,7 @@ import ResponsiveDrawer from "../../components/layout/layout"
 
 const Index = () => {
 	return (
-		<div>
+		<div className="main">
 			<ResponsiveDrawer/>
 		</div>
 	)

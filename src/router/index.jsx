@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import App from '../App';
-import {Login, Main, Posts} from "../pages/index"
+import {Login, Main, Posts, TaskBoard} from "../pages/index"
 const Index = () => {
 	const router = createBrowserRouter(
 		createRoutesFromElements(
@@ -10,6 +10,7 @@ const Index = () => {
 				<Route path='main/*' element={<Main/>}>
 					<Route index element={<Posts/>}/>
 					<Route path='posts' element={<Posts/>}/>
+					<Route path='todos' element={<TaskBoard/>}/>
 				</Route>
 			</Route>
 		)
